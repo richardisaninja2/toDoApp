@@ -1,16 +1,23 @@
+.title{
+  padding-top: 10%;
+}
 .container{
 
     justify-content: space-between;
 }
 table, tbody, th, td, tr {
     border: none;
+    
   }
   table { border-collapse:collapse }
-tr{
-
+td:nth-child(1){
+  border-radius: 10px 0 0 10px;
+}
+td:nth-child(3){
+  border-radius: 0 10px 10px 0;
+}
+  tr{
   width: 100%;
-  border-radius: 10px;
-
 }
 td{
   height: 8vh;
@@ -25,9 +32,27 @@ table{
   table-layout: fixed; 
   width: 500px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
+  body{
+    background: #000000;
+    color: white;
+  }
   table{
-    width: 100%;
-    margin-left: 0;
+    width: 90vw;
+    margin-left: 5%;
+  }
+  .addNew{
+  
+    background: #ffc200;
+    text-align: center;
+    line-height: 8vh;
+    border-radius: 30px;
+    height: 8vh;
+    width: 50%;
+    margin: auto;
+  }
+  a{
+    color: black;
+    text-decoration: none;
   }
 }

@@ -14,7 +14,9 @@ export default function ToDo(props){
     let setTasks = props.setTasks;
     let changeStatus = props.changeStatus;
 
-    let colors = ["#DE9E36", "#DEB841", "#3f96ec", "#fd6e41", "#EDD4B2", "#ECDCC9"];
+    // let colors = ["#DE9E36", "#DEB841", "#3f96ec", "#fd6e41", "#EDD4B2", "#ECDCC9"];
+    let colors = ["#1b1b1b", "#1b1b1b", "#1b1b1b", "#1b1b1b", "#1b1b1b", "#1b1b1b"];
+    // let colors = "#1b1b1b";
 
 
 
@@ -27,10 +29,13 @@ export default function ToDo(props){
 
     },[])
 
+
+
     return(
         
         <>
             <TaskContext.Provider value={setTasks}>
+                <h2 className="title">To Do Application</h2>
                 <table>
                     <tbody>
                     {tasks.map((item, i) => {
@@ -43,11 +48,12 @@ export default function ToDo(props){
                             <ToDoItem key={i} completed={item.completed} name={item.name} setTasks={setTasks} tasks={tasks} removeTasks={props.removeTasks} changeStatus={props.changeStatus} colors={colors[Math.ceil(i /2)]}/>
                         )
                     })}
-                    <tr>
-                    <Link to="/add"><p>Add New Item</p></Link>
-                    </tr>
+
                     </tbody>
                 </table>
+                <div style={{marginTop: "20px;"}} className="addNew">
+                    <Link to="/add"><p>Add New Item</p></Link>
+                </div>
                 {/* <AddToDo setTasks={setTasks}/> */}
             </TaskContext.Provider>
         </>
