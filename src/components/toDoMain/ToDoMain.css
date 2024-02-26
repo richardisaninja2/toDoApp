@@ -1,0 +1,33 @@
+.container{
+
+    justify-content: space-between;
+}
+table, tbody, th, td, tr {
+    border: none;
+  }
+  table { border-collapse:collapse }
+tr{
+
+  width: 100%;
+  border-radius: 10px;
+
+}
+td{
+  height: 8vh;
+  text-align: center;
+  text-align: center; 
+  vertical-align: middle;
+
+}
+table{
+  margin-left: 35%;
+  margin-top: 10%;
+  table-layout: fixed; 
+  width: 500px;
+}
+@media only screen and (max-width: 600px) {
+  table{
+    width: 100%;
+    margin-left: 0;
+  }
+}
