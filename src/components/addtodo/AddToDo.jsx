@@ -46,22 +46,22 @@ export default function AddToDo(props){
 
     return(
         <div className="addTaskCont">
-            <h2>Create Task</h2>
+            <h2 className="createH2">Create Task</h2>
             <form>
                 <label htmlFor="name">Task Name</label>
                 <input type="text" placeholder="name" ref={nameRef}></input>
                 <br/>
-                <label htmlFor="description">Description</label>
-                <input type="textarea" ref={descriptionRef}/>
-                <br/>
                 <label htmlFor="priority">Priority</label>
-                <select name="priority" ref={priorityRef}>
+                <select className="select" name="priority" ref={priorityRef}>
                     <option value="high" >High</option>
                     <option value="medium" >Medium</option>
                     <option value="low">Low</option>
                 </select>
                 <br/>
-                <button onClick={ handleSubmit}>Submit</button>
+                <label htmlFor="description">Description</label>
+                <input type="textarea" ref={descriptionRef}/>
+                <br/>
+                <button onClick={ handleSubmit}>Save</button>
             </form>
         </div>
     )

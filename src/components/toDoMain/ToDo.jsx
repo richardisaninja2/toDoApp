@@ -33,7 +33,7 @@ export default function ToDo(props){
 
     return(
         
-        <>
+        <div className="toDoBody">
             <TaskContext.Provider value={setTasks}>
                 <h2 className="title">To Do Application</h2>
                 <table>
@@ -56,6 +56,6 @@ export default function ToDo(props){
                 </div>
                 {/* <AddToDo setTasks={setTasks}/> */}
             </TaskContext.Provider>
-        </>
+        </div>
     )
 }
